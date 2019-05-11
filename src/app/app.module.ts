@@ -13,6 +13,7 @@ import {Filmservice} from './filmform/filmservice';
 
 @NgModule({
   declarations: [
+    // регистрируем компоненты
     AppComponent,
     TemplatedrivenformComponent,
     ModeldrivenformComponent,
@@ -20,12 +21,15 @@ import {Filmservice} from './filmform/filmservice';
     FilmformComponent
   ],
   imports: [
+    // регистрируем внешние библиотеки
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
+  // регистрируем сервисы
   providers: [Httpservice, Filmservice],
+  // стартовая точка приложения
   bootstrap: [AppComponent]
 })
 export class AppModule { }
