@@ -1,0 +1,19 @@
+<hr>
+<ul>
+  <li *ngFor="let film of httpService.films">{{film.name}} {{film.title}}
+    <button (click)="delete(film.id)">Удалить</button>
+    <button (click)="showForEdit(film)">Редактировать</button>
+  </li>
+</ul>
+<br>
+<form #filmForm = "ngForm" (ngSubmit)="onSubmit(filmForm) ">
+<input type="hidden" name="id" [(ngModel)]="httpService.film.id"/>
+<br>
+<input type="text" name="name" [(ngModel)]="httpService.film.name"/>
+<br>
+<input type="text" name="title" [(ngModel)]="httpService.film.title"/>
+<br>
+<!--<button (click)="submit(film)">Добавить фильм</button>-->
+  <button type = "submit">Submit</button>
+  <button type = "button" (click)="resetForm(filmForm)">Reset</button>
+</form>

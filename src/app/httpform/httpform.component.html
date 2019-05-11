@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let actor of actors">{{actor.firstName}} {{actor.lastName}}</li>
+</ul>
+<br>
+<input type="number" name="id" [(ngModel)]="actor.id" />
+<br>
+<input type="text" name="firstname" [(ngModel)]="actor.firstName" />
+<br>
+<input type="text" name="lastname" [(ngModel)]="actor.lastName" />
+<br>
+<input type="text" name="genre" [(ngModel)]="actor.genre" />
+<br>
+<button (click)="submit(actor)">Добавить</button>>
